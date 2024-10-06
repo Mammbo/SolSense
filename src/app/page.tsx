@@ -1,19 +1,15 @@
 import React from 'react'
 import { LayoutDashboard, ChartColumnIncreasing, CircleAlert, Mails, CircleHelp, FileStack, Settings, Activity } from "lucide-react";
 import Sidebar, {SidebarItem} from '~/components/Sidebar'
-import { db } from '~/server/db';
-import { SignedIn, SignedOut, SignIn, SignInButton } from '@clerk/nextjs';
-import { Sign } from 'crypto';
+import { SignedIn, SignedOut,  SignInButton } from '@clerk/nextjs';
 import Header from '~/components/header';
+import { getMyGeoData } from '~/server/queries';
 
 // This is a dynamic import you should use this in more projects lol 
 export const dynamic = "force-dynamic";
 
 export default async function HomePage() {
-
-  const posts = db.query.posts.findMany({
-    orderBy: (model, { desc }) => desc(model.id)
-  });
+  const geoData = await getMyGeoData();
 
   return (
     <main className="flex flex-col text-2xl ">

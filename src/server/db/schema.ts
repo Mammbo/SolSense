@@ -18,13 +18,15 @@ import {
  */
 
 //you will probably have to scaffold this database alot with different schemas for different nasa apis
-export const createTable = pgTableCreator((name) => `solsense_${name}`);
+export const createTable = pgTableCreator((geoData) => `solsense_${geoData}`);
 
-export const posts = createTable(
+export const geoData = createTable(
   "post",
   {
     id: serial("id").primaryKey(),
     name: varchar("name", { length: 256 }).notNull(),
+
+    userId: varchar("user_id", { length: 256 }).notNull(),
     createdAt: timestamp("created_at", { withTimezone: true })
       .default(sql`CURRENT_TIMESTAMP`)
       .notNull(),
