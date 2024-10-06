@@ -10,8 +10,9 @@ import MapRender from '~/components/MapRender';
 // This is a dynamic import you should use this in more projects lol 
 export const dynamic = "force-dynamic";
 
+
 export default async function HomePage() {
-  const geoData = await getMyGeoData();
+//  const geoData = await getMyGeoData();
 
   return (
     <main className="flex flex-col text-2xl ">
@@ -19,8 +20,9 @@ export default async function HomePage() {
       <SignedOut>
         <div className="flex justify-center p-80 w-full h-full gap-2 align-middle">
           <h1 className="text-4xl">Welcome to SolSense Please </h1>
-          <button className='text-4xl text-green-300'> <SignInButton /></button>
+          <button className='text-4xl text-green-300'> <SignInButton>Sign In</SignInButton> </button>
         </div>
+
       </SignedOut>
 
       <SignedIn>
