@@ -6,8 +6,10 @@ import { auth } from "@clerk/nextjs/server";
 export async function getMyGeoData() {
 
     const user = auth();
-    if (!user.userId) throw new Error("Unauthorized");
-
+    if (!user) {
+        throw new Error("User not found");
+    }
+    
     const geoData = db.query.geoData.findMany({
         where: (model, { eq }) => eq(model.userId, user.userId),
         orderBy: (model, { desc }) => desc(model.id)

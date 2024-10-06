@@ -1,4 +1,5 @@
-import { Tractor, ChartColumnIncreasing, CircleAlert, Mails, CircleHelp, FileStack, Settings, Activity } from "lucide-react";
+import { ClerkProvider, SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/nextjs";
+import { Tractor, ChartColumnIncreasing, CircleAlert, Mails, CircleHelp, FileStack, Settings, Activity, Component } from "lucide-react";
 
 const Header = () => {
     return (
@@ -21,6 +22,12 @@ const Header = () => {
                     <Tractor size={30}/>
                 </button>
             </div>
+                <SignedOut>
+                    <SignInButton />
+                </SignedOut>
+                <SignedIn>
+                    <UserButton />
+                </SignedIn>
         </header>
     );
 };

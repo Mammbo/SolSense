@@ -3,6 +3,7 @@ import { LayoutDashboard, ChartColumnIncreasing, CircleAlert, Mails, CircleHelp,
 import Sidebar, {SidebarItem} from '~/components/Sidebar'
 import { db } from '~/server/db';
 import { getMyGeoData } from '~/server/queries';
+import Header from '~/components/header';
 
 // This is a dynamic import you should use this in more projects lol 
 export const dynamic = "force-dynamic";
@@ -12,6 +13,7 @@ export default async function HomePage() {
 
   return (
     <main className="flex flex-col ">
+      <Header />
       <div className="flex flex-1">
         <Sidebar>
           <SidebarItem icon={<LayoutDashboard size={20} />} text="Real-Time Data Layers" active={false} />
