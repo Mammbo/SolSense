@@ -6,6 +6,7 @@ Todo: Initializing project
 - [x] Tidy up build process
 - [x] Set up a database (vercel postgres) 
 - [x] Attach datatbase to UI 
+<<<<<<< HEAD
 - [x] add auth 
 - [x] Add pagination and side bar options (basic funcitonality ill add here ) 
 - [] User upload stuff (refer to t3 video if needed, lots of routing and db uploads and file collections) this is probably a post hackathon thing tho right now just focus on displaying real time data to the user.
@@ -24,3 +25,12 @@ Todo: Actual Project
 Todo: After Hackathon
 - [] Add animated loading screen on website click
 - [] Make a Sign In Page
+=======
+- [] add auth 
+- [] Add pagination and side bar options (basic funcitonality ill add here ) 
+- [] Error management 
+- [] Routing/map/bashboard page (parallel route) 
+- [] Delete button (w/server actions) 
+- [] Analystics (posthog) 
+- [] Ratelimiting (upstash)
+>>>>>>> parent of 058eeea (auth configured)
