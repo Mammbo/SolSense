@@ -16,49 +16,24 @@ export default function Sidebar({ children }: { children: ReactNode }) {
   
   return (
     <aside className="h-screen flex flex-col justify-between">
-      <nav className="h-full flex flex-col bg-gray-800 border-r border-green-700">
-        <div className="p-4 pb-8 flex justify-between items-center">
-          <img
-            src="https://img.logoipsum.com/243.svg"
-            className={`overflow-hidden transition-all ${
-              expanded ? "w-32" : "w-0"
-            }`}
-            alt=""
-          />
+      <nav className="h-full flex flex-col bg-gray-800 border-r-2 border-green-700">
+        <div className="p-4 flex justify-between items-center">
+        
           <button
             onClick={() => setExpanded((curr) => !curr)}
-            className="p-1.5 rounded-lg bg-green-500 hover:bg-green-400"
+            className="p-3 rounded-lg bg-green-500 hover:bg-green-400"
           >
             {expanded ? <ChevronFirst /> : <ChevronLast />}
           </button>
         </div>
 
-        <div className="  border-t border-green-700"></div>
+        <div className="border-t-2 border-green-700"></div>
 
         <SidebarContext.Provider value={{ expanded, activeItem, setActiveItem }}>
-          <ul className="flex-1 px-3 flex flex-col justify-center">{children}</ul>
+          <ul className="flex px-3 flex-col justify-center">{children}</ul>
         </SidebarContext.Provider>
 
-        <div className="border-t border-green-700 flex p-3">
-          <img
-          /* add clerk auth here */
-            src="https://ui-avatars.com/api/?background=c7d2fe&color=3730a3&bold=true"
-            alt=""
-            className="w-10 h-10 rounded-md"
-          />
-          <div
-            className={`
-              flex justify-between items-center
-              overflow-hidden transition-all ${expanded ? "w-52 ml-3" : "w-0"}
-          `}
-          >
-            <div className="leading-4">
-              <h4 className="font-semibold">John Doe</h4>
-              <span className="text-xs text-white-600">johndoe@gmail.com</span>
-            </div>
-            <MoreVertical size={20} />
-          </div>
-        </div>
+        
       </nav>
     </aside>
   )
@@ -93,7 +68,7 @@ export function SidebarItem({ icon, text, active, alert }: SidebarItemProps) {
         <li
             onClick={handleClick}
             className={`
-                relative flex items-center py-6 px-3 my-1
+                relative flex items-center justify-center py-5 px-3 my-4
                 font-medium rounded-md cursor-pointer
                 transition-colors group
                 ${

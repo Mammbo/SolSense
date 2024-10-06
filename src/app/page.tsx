@@ -1,12 +1,11 @@
 import React from 'react'
-import Header from '~/components/header'
 import { LayoutDashboard, ChartColumnIncreasing, CircleAlert, Mails, CircleHelp, FileStack, Settings, Activity } from "lucide-react";
 import Sidebar, {SidebarItem} from '~/components/Sidebar'
 
 const HomePage = () => {
   return (
-  <main>
-      <div className="flex">
+    <main className="flex flex-col ">
+      <div className="flex flex-1">
         <Sidebar>
           <SidebarItem icon={<LayoutDashboard size={20} />} text="Real-Time Data Layers" active={false} />
           <SidebarItem icon={<ChartColumnIncreasing size={20} />} text="Predictive Analytics" alert active={false} />
@@ -17,6 +16,9 @@ const HomePage = () => {
           <SidebarItem icon={<Settings size={20} />} text="Settings" active={false} />
           <SidebarItem icon={<CircleHelp size={20} />} text="Help" active={false} />
         </Sidebar>
+        <div className="flex-1">
+          {/* Your main content goes here */}
+        </div>
       </div>
     </main>
   )
