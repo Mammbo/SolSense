@@ -2,7 +2,8 @@
 
 Todo: Initializing project 
 - [x] Make it deploy (vercel) 
-- [] Scaffold basic ui with mock data 
+- [x] Scaffold basic ui with mock data 
+- [x] Tidy up build process
 - [] Set up a database (vercel postgres) 
 - [] Attach datatbase to UI 
 - [] add auth 
