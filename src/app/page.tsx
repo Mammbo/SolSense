@@ -1,8 +1,13 @@
 import React from 'react'
 import { LayoutDashboard, ChartColumnIncreasing, CircleAlert, Mails, CircleHelp, FileStack, Settings, Activity } from "lucide-react";
 import Sidebar, {SidebarItem} from '~/components/Sidebar'
+import { db } from '~/server/db';
 
-const HomePage = () => {
+
+export default async function HomePage() {
+
+  const posts = db.query.posts.findMany();
+
   return (
     <main className="flex flex-col ">
       <div className="flex flex-1">
@@ -23,4 +28,3 @@ const HomePage = () => {
     </main>
   )
 }
-export default HomePage
