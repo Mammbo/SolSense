@@ -9,15 +9,11 @@ Todo: Initializing project
 - [x] add auth 
 - [x] Add pagination and side bar options (basic funcitonality ill add here ) 
 - [] User upload stuff (refer to t3 video if needed, lots of routing and db uploads and file collections) this is probably a post hackathon thing tho right now just focus on displaying real time data to the user.
-- [] "taint" (server-only)
-- [] Use Next/Image component 
-- [] Error management 
-- [] Routing/map/bashboard page (parallel route) 
-- [] Delete button (w/server actions) 
-- [] Analystics (posthog) 
-- [] Ratelimiting (upstash)
+- [x] "taint" (server-only)
+- [x] Use Next/Image component 
 - [] Add Logo 
 - [] Add Favicon
+- [] Add leaflet map 
 
 Todo: Actual Project 
 - []

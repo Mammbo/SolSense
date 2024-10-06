@@ -1,9 +1,11 @@
-import React from 'react'
+import * as React from 'react';
 import { LayoutDashboard, ChartColumnIncreasing, CircleAlert, Mails, CircleHelp, FileStack, Settings, Activity } from "lucide-react";
-import Sidebar, {SidebarItem} from '~/components/Sidebar'
-import { SignedIn, SignedOut,  SignInButton } from '@clerk/nextjs';
+import Sidebar, { SidebarItem } from '~/components/Sidebar';
+import { SignedIn, SignedOut, SignInButton } from '@clerk/nextjs';
 import Header from '~/components/header';
 import { getMyGeoData } from '~/server/queries';
+
+import MapRender from '~/components/MapRender';
 
 // This is a dynamic import you should use this in more projects lol 
 export const dynamic = "force-dynamic";
@@ -31,15 +33,18 @@ export default async function HomePage() {
             <SidebarItem icon={<Mails size={20} />} text="Farm Specific Reports" active={false} />
             <SidebarItem icon={<CircleAlert size={20} />} text="Alerts" active={false} />
             <SidebarItem icon={<Activity size={20} />} text="Insights" active={false} />
-            <SidebarItem icon={<FileStack size={20} />} text="Historical Data"  active={false}/>
+            <SidebarItem icon={<FileStack size={20} />} text="Historical Data" active={false} />
             <SidebarItem icon={<Settings size={20} />} text="Settings" active={false} />
             <SidebarItem icon={<CircleHelp size={20} />} text="Help" active={false} />
           </Sidebar>
+
           <div className="flex-1">
             {/* Your main content goes here */}
+            <MapRender />
           </div>
         </div>
       </SignedIn>
     </main>
-  )
+  );
 }
+
