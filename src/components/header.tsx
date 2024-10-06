@@ -1,15 +1,11 @@
 import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/nextjs";
 import { Tractor } from "lucide-react";
-import Image from "next/image";
 
 const Header = () => {
     return (
         <header className="bg-gray-800 text-white p-4 flex gap-10 justify-items-center justify-between items-center border-b-2 border-green-800">
-            <Image
+            <img
                 src="https://img.logoipsum.com/243.svg"
-                style={{ objectFit: "contain" }}
-                width={200}
-                height={200}
                 alt="SolSense"
                 className="flex align-l"
             />

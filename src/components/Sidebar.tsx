@@ -1,6 +1,6 @@
 'use client'
 
-import { ChevronLast, ChevronFirst } from "lucide-react"
+import { MoreVertical, ChevronLast, ChevronFirst } from "lucide-react"
 import { useContext, createContext, useState, useEffect } from "react"
 import { ReactNode } from "react";
 
@@ -69,20 +69,20 @@ export function SidebarItem({ icon, text, active, alert }: SidebarItemProps) {
             onClick={handleClick}
             className={`
                 relative flex items-center justify-center py-5 px-3 my-4
-                 rounded-md cursor-pointer
+                font-medium rounded-md cursor-pointer
                 transition-colors group
                 ${
                     isActive
                         ? "bg-gradient-to-tr from-green-400 to-green-300 text-emerald-600"
-                        : "hover:bg-green-200 text-emerald-600 "
+                        : "hover:bg-green-200 text-emerald-600"
                 }
                 whitespace-nowrap
             `}
         >
             {icon}
             <span
-                className={`overflow-hidden transition-all text-base ${
-                    expanded ? "w-52 ml-3" : "w-0 "
+                className={`overflow-hidden transition-all ${
+                    expanded ? "w-52 ml-3" : "w-0"
                 }`}
             >
                 {text}
