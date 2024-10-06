@@ -3,10 +3,14 @@ import { LayoutDashboard, ChartColumnIncreasing, CircleAlert, Mails, CircleHelp,
 import Sidebar, {SidebarItem} from '~/components/Sidebar'
 import { db } from '~/server/db';
 
+// This is a dynamic import you should use this in more projects lol 
+export const dynamic = "force-dynamic";
 
 export default async function HomePage() {
 
-  const posts = db.query.posts.findMany();
+  const posts = db.query.posts.findMany({
+    orderBy: (model, { desc }) => desc(model.id)
+  });
 
   return (
     <main className="flex flex-col ">
