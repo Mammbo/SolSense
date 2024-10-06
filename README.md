@@ -6,7 +6,7 @@ Todo: Initializing project
 - [x] Tidy up build process
 - [x] Set up a database (vercel postgres) 
 - [x] Attach datatbase to UI 
-- [] add auth 
+- [x] add auth 
 - [] Add pagination and side bar options (basic funcitonality ill add here ) 
 - [] Error management 
 - [] Routing/map/bashboard page (parallel route) 
