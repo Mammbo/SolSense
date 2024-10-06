@@ -4,7 +4,7 @@ import Sidebar, { SidebarItem } from '~/components/Sidebar';
 import { SignedIn, SignedOut, SignInButton } from '@clerk/nextjs';
 import Header from '~/components/header';
 import { getMyGeoData } from '~/server/queries';
-
+import Map from '~/components/Map';
 import MapRender from '~/components/MapRender';
 
 // This is a dynamic import you should use this in more projects lol 
@@ -42,7 +42,7 @@ export default async function HomePage() {
             {/* Your main content goes here */}
             <MapRender />
           </div>
-        </div>
+        </div>x
       </SignedIn>
     </main>
   );
