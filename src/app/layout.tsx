@@ -19,7 +19,6 @@ export default function RootLayout({
     <ClerkProvider>
       <html lang="en" className={`${GeistSans.variable}`}>
         <body>
-          <Header/>
           {children}
           </body>
       </html>
