@@ -6,21 +6,14 @@ const Header = () => {
     return (
         <header className="bg-gray-800 text-white p-4 flex gap-10 justify-items-center justify-between items-center border-b-2 border-green-800">
             <Image
-                src="https://img.logoipsum.com/243.svg"
+                src="logo.svg"
                 style={{ objectFit: "contain" }}
                 width={200}
                 height={200}
                 alt="SolSense"
                 className="flex align-l"
             />
-            
-            <div className="flex items-center w-full max-w-2xl">
-                <input
-                    type="text"
-                    placeholder="Search For Loacation . . . . . ."
-                    className="p-2  rounded border-2 bg-slate-700 border-green-800 w-full"
-                />
-            </div>
+        
 
             <div className="flex gap-10">
 
