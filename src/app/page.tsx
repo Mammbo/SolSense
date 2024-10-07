@@ -19,7 +19,7 @@ export default async function HomePage() {
 
       <SignedOut>
         <div className="flex justify-center p-80 w-full h-full gap-2 align-middle">
-          <button className='text-4xl text-green-300'> <SignInButton>Welcome to SolSense Please Sign In</SignInButton> </button>
+          <button className='text-4xl text-customMediumBlue'> <SignInButton>Welcome to SolSense Please Sign In</SignInButton> </button>
         </div>
 
       </SignedOut>
