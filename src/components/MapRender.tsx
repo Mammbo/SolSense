@@ -13,7 +13,7 @@ export default async function Page() {
 
     return (
         <div className="bg-white-700  w-full h-full">
-            <Map posix={[4.79029, -75.69003]} />
+            <Map />
         </div>
     )
 }
