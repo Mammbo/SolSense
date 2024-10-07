@@ -16,18 +16,18 @@ export default function Sidebar({ children }: { children: ReactNode }) {
   
   return (
     <aside className="h-screen flex flex-col justify-between">
-      <nav className="h-full flex flex-col bg-gray-800 border-r-2 border-green-700">
+      <nav className="h-full flex flex-col bg-gray-800 border-r-2 border-customDarkBlue">
         <div className="p-4 flex justify-between items-center">
         
           <button
             onClick={() => setExpanded((curr) => !curr)}
-            className="p-3 rounded-lg bg-green-500 hover:bg-green-400"
+            className="p-3 rounded-lg bg-customMediumBlue hover:bg-customLightBlue"
           >
             {expanded ? <ChevronFirst /> : <ChevronLast />}
           </button>
         </div>
 
-        <div className="border-t-2 border-green-700"></div>
+        <div className="border-t-2 border-customDarkBlue"></div>
 
         <SidebarContext.Provider value={{ expanded, activeItem, setActiveItem }}>
           <ul className="flex px-3 flex-col justify-center">{children}</ul>
@@ -73,8 +73,8 @@ export function SidebarItem({ icon, text, active, alert }: SidebarItemProps) {
                 transition-colors group
                 ${
                     isActive
-                        ? "bg-gradient-to-tr from-green-400 to-green-300 text-emerald-600"
-                        : "hover:bg-green-200 text-emerald-600 "
+                        ? "bg-gradient-to-tr from-customDarkBlue to-customMediumBlue text-customOrgange"
+                        : "hover:bg-customMediumBlue text-customOrgange "
                 }
                 whitespace-nowrap
             `}
@@ -92,8 +92,7 @@ export function SidebarItem({ icon, text, active, alert }: SidebarItemProps) {
                 <div
                     className={`
                         absolute left-full rounded-md px-2 py-1 ml-6
-                        bg-green-100 text-green-800 text-sm
-                        invisible opacity-20 -translate-x-3 transition-all
+                        text-sm invisible opacity-20 -translate-x-3 transition-all
                         group-hover:visible group-hover:opacity-100 group-hover:translate-x-0
                         whitespace-nowrap
                     `}
